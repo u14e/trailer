@@ -22,6 +22,8 @@
   "homepage": "https://github.com/u14e/trailer#readme",
   "devDependencies": {},
   "dependencies": {
-    "koa": "^2.4.1"
+    "koa": "^2.4.1",
+    "koa-views": "^6.1.3",
+    "pug": "^2.0.0-rc.4"
   }
 }

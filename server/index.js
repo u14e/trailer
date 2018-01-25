@@ -1,8 +1,20 @@
 const Koa = require('koa')
+const views = require('koa-views')
+const { resolve } = require('path')
 
 const app = new Koa()
 
-app.use(async (ctx, next) => ctx.body = 'Hello World')
+// 集成views的中间件
+app.use(views(resolve(__dirname, './views'), {
+  extension: 'pug'
+}))
+
+
+app.use(async (ctx, next) => {
+  await ctx.render('index', {
+    name: 'u14e'
+  })
+})
 
 app.listen(3000)
 
