@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer')
 
+// 电影 -> 分类
 const url = `https://movie.douban.com/tag/#/?sort=R&range=6,10&tags=`
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time))
