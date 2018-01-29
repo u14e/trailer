@@ -1,6 +1,7 @@
 const child_process = require('child_process')
 const { resolve } = require('path')
 
+// 获取预告片的视频和封面
 ;(async () => {
   const script = resolve(__dirname, '../crawler/video')
   const child = child_process.fork(script, [])

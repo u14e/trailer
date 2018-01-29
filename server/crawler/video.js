@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer')
 
 const detail_url = 'https://movie.douban.com/subject/'
-const detail_id = '26828285'
+const id = '27090813'
 const video_url = 'https://movie.douban.com/trailer/226770/'
 
 const sleep = time => new Promise(resolve => setTimeout(resolve, time))
@@ -14,7 +14,7 @@ const sleep = time => new Promise(resolve => setTimeout(resolve, time))
     dumpio: false
   })
   const page = await browser.newPage()
-  await page.goto(`${detail_url}${detail_id}`, {
+  await page.goto(`${detail_url}${id}`, {
     waitUntil: 'networkidle2'  // 网络空闲
   })
   await sleep(1000)
@@ -56,7 +56,7 @@ const sleep = time => new Promise(resolve => setTimeout(resolve, time))
 
   const data = {
     video,
-    detail_id,
+    id,
     cover: result.cover
   }
 

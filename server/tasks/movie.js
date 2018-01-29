@@ -1,6 +1,7 @@
 const child_process = require('child_process')
 const { resolve } = require('path')
 
+// 获取电影列表
 ;(async () => {
   const script = resolve(__dirname, '../crawler/trailer-list')
   const child = child_process.fork(script, [])
